@@ -186,7 +186,7 @@ export default function Banner() {
       {/* Banner Slider */}
       <div>
       <div className="flex relative">
-        <div className="relative w-full h-64 overflow-hidden bg-black text-white">
+        <div className="relative w-full h-80 overflow-hidden bg-black text-white">
           {/* Slides */}
           <div
             className="flex transition-transform duration-700"
@@ -195,7 +195,7 @@ export default function Banner() {
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className="w-full flex-shrink-0 h-64 flex items-center justify-center relative"
+                className="w-full flex-shrink-0 h-80 flex items-center justify-left relative"
               >
                 <Image
                   src={slide.image}
@@ -221,13 +221,13 @@ export default function Banner() {
           {/* Navigation */}
           <button
             onClick={prevSlide}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 p-2 rounded-full text-white hover:bg-gray-600"
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 p-2 rounded-full text-white hidden hover:bg-gray-600"
           >
             &#8592;
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 p-2 rounded-full text-white hover:bg-gray-600"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 p-2 rounded-full text-white hidden hover:bg-gray-600"
           >
             &#8594;
           </button>
@@ -257,3 +257,5 @@ export default function Banner() {
     
   );
 }
+
+
